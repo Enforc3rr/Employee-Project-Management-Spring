@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace = "layouts::header"></head>
+<body>
+<nav th:replace ="layouts::navbar"></nav>
+	<div>
+		<h4>
+	Employee Name
+	</h4>
+	<table>
+	<thead>
+			<tr>
+				<th>Employee Name</th>
+				<th>Employee Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "aProject : ${employee}" >
+				<td th:text="${aProject.firstName}"/>
+				<td th:text="${aProject.email}"/>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
